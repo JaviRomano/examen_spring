@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+	<div class="container">
+
+		<h1 th:text="${titulo}"></h1>
+		<img th:src="@{/img/zoro.jpg}" alt="Bienvenida"	style="max-width: 300px; max-height: 300px;" />
+		<p th:text="${info}"></p>
+
+		<div class="links">
+			<a th:href="@{/edificio/form">Edificio</a>
+			<a th:href="@{/edificio/list}">Lista</a>
+		</div>
+	</div>
+
+</body>
+</html>

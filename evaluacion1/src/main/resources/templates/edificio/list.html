@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<h1>Lista de edificios</h1>
+	<h1><a th:href="@{/edificio/form}">Añadir nuevo edificio</a></h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Denominación</th>
+				<th>Nº de plantas</th>
+				<th>Calle</th>
+				<th>Tipo</th>
+				<th>Habitable</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="edificio : ${edificios}">
+				<td th:text="${edificio.id}"></td>
+				<td th:text="${edificio.denominacion}"></td>
+				<td th:text="${edificio.nPlantas}"></td>
+				<td th:text="${edificio.calle}"></td>
+				<td th:text="${edificio.tipo}"></td>
+				<td th:text="${edificio.habitable ? 'Si' : 'No'}"></td>
+				<td>
+				<a th:href="@{/edificio/show/} + ${edificio.id}">Mostrar</a>				
+				<a th:href="@{/edificio/form/} + ${edificio.id}">Actualizar</a>
+				<a th:href="@{/edificio/delete/} + ${edificio.id}">Aniquilar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<a th:href="@{/home}">Volver a inicio</a>
+
+
+</body>
+</html>

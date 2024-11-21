@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<h1>Formulario de edificios</h1>
+
+<form th:action="@{/edificio/form}" th:object="${edificio}" method="post">
+	<label>Denominación: <input type="text" th:field="*{denominacion}" required/></label><br>
+	<label>Nº de plantas: <input type="number" th:field="*{nPlantas}" step="0.01" required/></label><br>
+	<label>Calle: <input type="text" th:field="*{calle}" required/></label><br>
+	<label>Tipo: <input type="text" th:field="*{tipo}" required/></label><br>
+	<label>Habitable: <input type="checkbox" th:field="*{habitable}" /></label><br>
+	<input type="hidden" th:field= "*{id}"/>
+	<button type="submit">Guardar</button>
+	
+</form>
+
+<a th:href="@{/edificio/list}">Volver a la lista</a>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (1, 'Hotel Lobby', 4, 'Reyes Católicos', true, 'o');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (2, 'Torre Mapfre', 8, 'Belmonte', false, 'l');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (3, 'Plaza Pedro Santos Gómez', 5, 'Niculoso Pisano', true, 'v');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (4, 'Hotel kivir', 3, 'Paseo Colón', true, 'o');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (5, 'Estadio Ramon Sanchez Pizjuan', 2, 'Eduardo Dato', false, 'l');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (6, 'Catedral de Sevilla', 30, 'Av. de la Constitución', false, 'l');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (7, 'Hotel Doña María', 5, 'Don Remondo', true, 'o');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (8, 'Torre Sevilla', 40, 'Americo Vespucio', true, 'o');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (9, 'Edificio Todogoma', 3, 'Calle Adriano', true, 'v');
+INSERT INTO edificios (id, denominacion, n_plantas, calle, habitable, tipo) VALUES (10, 'Hospital Fátima', 5, 'Avenida la Palmera', true, 'l');
