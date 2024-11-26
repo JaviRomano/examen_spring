@@ -11,12 +11,13 @@
 	<ul>
 		<li><b>Id:</b> <span th:text="${edificio.id}"></span></li>
 		<li><b>Denominación:</b> <span th:text="${edificio.denominacion}"></span></li>
-		<li><b>Nº plantas:</b> <span th:text="${edificio.nPlantas}"></span></li>
+		<li><b>Nº plantas:</b> <span th:text="${edificio.nPlantas == 1 ? edificio.nPlantas + ' planta' : edificio.nPlantas + ' plantas'}"></span></li>
 		<li><b>Calle:</b> <span th:text="${edificio.calle}"></span></li>
-		<li><b>Tipo:</b> <span th:text="${edificio.tipo}"></span></li>
-		<li><b>Habitable:</b> <span th:text="${edificio.available ? 'Si' : 'No' }"></span></li>		
+		<li><b>Tipo:</b> <span th:text="${edificio.tipo.equals('l') ? 'Local comercial' : (edificio.tipo.equals('v') ? 'Vivienda' : 'Local de ocio')}"></span></li>
+		<li><b>Habitable:</b> <span th:text="${edificio.habitable ? 'Si' : 'No' }"></span></li>		
 	</ul>
 <a th:href="@{/edificio/list}">Volver a la lista</a>
 
 </body>
 </html>
+

@@ -29,9 +29,9 @@ public class EdificioController {
 		this.edificioService = edificioService;
 	}
 	
-	@GetMapping("/listaEdificios")
+	@GetMapping("/list")
 	public String getAllEdificios(Model model) {
-		model.addAttribute("edificio", edificioService.getAllEdificios());
+		model.addAttribute("edificios", edificioService.getAllEdificios());
 		return "edificio/list";
 	}
 	
@@ -45,12 +45,12 @@ public class EdificioController {
 	@GetMapping("/delete/{id}")
 	public String deleteEdificioById(Model model, @PathVariable Long id) {
 		edificioService.deleteById(id);		
-		return "redirect:/edificio/list";
+		return "redirect:/edificio/listaEdificios";
 	}
 	
 	@GetMapping("/form/{id}")
 	public String editEdificio(Model model, @PathVariable Long id) {
-		model.addAttribute("edificio", edificioService.findById(id));
+		model.addAttribute("edificio", edificioService.findById(id).orElse(new Edificio()));
 		return "edificio/form";
 	}
 	

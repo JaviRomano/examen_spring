@@ -39,7 +39,7 @@ public class Edificio {
 		this.id = id;
 	}
 
-	public String getDenominación() {
+	public String getDenominacion() {
 		return denominacion;
 	}
 
